@@ -5,11 +5,14 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 
-body {
+body  {
   min-inline-size: 375px;
   max-inline-size: 1440px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 h1,
