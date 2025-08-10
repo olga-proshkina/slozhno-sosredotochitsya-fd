@@ -6,16 +6,19 @@
   font-family: "IBM Plex Mono", sans-serif;
   background-color: var(--bg-color);
   margin: auto;
-}
-
-.decorated-zone {
-  padding: 10px;
   background-image: var(--bg-image-path);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  width: min(calc(100vw - 40px), 1024px);
+}
+
+.decorated-zone {
+height: calc(100vh - 20px);
+width: calc(100vw - 20px);
+position: absolute;
+padding: 10px;
 }
 
 .decorated-zone::before {
@@ -24,8 +27,8 @@
   height: 25px;
   width: 25px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   border-top: solid 1px var(--decoration-color);
   border-right: solid 1px var(--decoration-color);
 }
@@ -36,23 +39,22 @@
   height: 25px;
   width: 25px;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0;
+  left: 0;
   border-bottom: solid 1px var(--decoration-color);
   border-left: solid 1px var(--decoration-color);
 }
 
 .header {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-block-end: 30px;
+  margin-block-end: 20px;
+  height: max(668px, 100vh);
+  padding: 10px;
 }
 
 .page-decoration-text {
   position: absolute;
-  right: 39px;
-  top: 14px;
+  right: 29px;
+  top: 4px;
   text-transform: uppercase;
   color: var(--accent-color);
   font-size: 18px;
@@ -126,6 +128,7 @@
 
 .header__theme-menu-button_active {
   border: solid 1px var(--menu-color);
+  pointer-events: none;
 }
 
 .section {
@@ -196,63 +199,26 @@
 }
 
 .footer {
-  height: 100vh;
-  position: absolute;
-  width: 100%;
+  height: max(668px, 100vh);
   margin-block-start: 20px;
+  padding: 10px;
 }
-
-.footer::before {
-  content: "";
-  color: var(--decoration-color);
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border-top: solid 1px var(--decoration-color);
-  border-right: solid 1px var(--decoration-color);
+.footer__decorated-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.footer::after {
-  content: "";
-  color: var(--decoration-color);
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  border-bottom: solid 1px var(--decoration-color);
-  border-left: solid 1px var(--decoration-color);
-}
-
 .footer__title {
   font-family: "IBM Plex Mono", sans-serif;
   color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 0.04em 0.04em var(--accent-color);
-  line-height: 100vh;
   font-weight: 700;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
+  line-height: 83%;
 }
 
 @media (width >= 750px) {
-  .decorated-zone::before {
-    top: 20px;
-    right: 20px;
-  }
-
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
-  }
-
-  .decorated-zone {
-    padding: 20px;
-  }
-
+  
   .title {
     translate: -20px 5px;
   }
@@ -260,18 +226,27 @@
   .header__title-decor {
     width: 50%;
     display: flex;
-    justify-self: end;
     margin-block-start: 11px;
+    margin-inline-start: calc(100% / );
   }
-
+  .header__decor {
+    display: flex;
+    justify-content: end;
+  }
   .header__theme-menu-list {
     margin-block-start: 172px;
   }
 
   .header {
     margin-block-end: 40px;
+    block-size: max(668px, 100vh);
+    padding: 20px
   }
-
+  .decorated-zone {
+    height: calc(100vh - 40px);
+    width: min(calc(100vw - 40px), 1024px);
+    position: absolute;
+}
   .section {
     padding: 20px;
     display: grid;
@@ -356,25 +331,16 @@
     grid-row: 3;
     grid-column: 2/4;
   }
-
+  .footer {
+    padding: 20px;
+    height: max(668px, 100vh);
+  }
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .footer::before {
-    top: 20px;
-    right: 20px;
-  }
-
-  .footer::after {
-    bottom: 20px;
-    left: 20px;
-    border-bottom: solid 1px var(--decoration-color);
-    border-left: solid 1px var(--decoration-color);
   }
 }
 

@@ -7,50 +7,54 @@
     <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
     <script src="./scripts/script.js"></script>
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" href="icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="mobile-icon.png" />
-    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
   </head>
   <body class="page">
-    <header class="header decorated-zone">
-      <p class="page-decoration-text" aria-hidden="true">rec</p>
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              день
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              неон
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <h1 class="title">no focus</h1>
-      <p class="header__title-decor title-decor">
-        Что делать, когда не можешь делать ничего<br />
-        Или почему нам так сложно сконцентрироваться, особенно когда очень надо
-      </p>
+    <header class="header">
+      <div class="decorated-zone">
+        <span class="page-decoration-text" aria-hidden="true">rec</span>
+        <nav class="header__theme-menu">
+          <ul class="header__theme-menu-list">
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_light"
+              >
+                день
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+                disabled
+              >
+                авто
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_dark"
+              >
+                неон
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="title">no focus</h1>
+        <div class="header__decor">
+          <p class="header__title-decor title-decor">
+            Что делать, когда не можешь делать ничего<br />
+            Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+          </p>
+        </div>
+      </div>
     </header>
     <main class="content">
       <section class="section section__why">
@@ -63,7 +67,7 @@
               важные. Где же легендарная многозадачность, когда она так нужна
               вам (и всем нанимающим менеджерам этого мира)? А дело в том, что
               её просто не существует. Исследователи
-              <a class="text-link">выяснили</a>, что мозгу тяжело
+              <a href="https://dana.org/article/multicosts-of-multitasking/" class="text-link">выяснили</a>, что мозгу тяжело
               концентрироваться даже на двух делах одновременно. А когда в поле
               внимания попадает несколько важных задач, организм паникует и
               выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы
@@ -130,11 +134,11 @@
           секунд)
         </h2>
         <ul class="content__list">
-          <p class="title-decor">5 простых (на самом деле не очень) советов</p>
+          <h3 class="title-decor">5 простых (на самом деле не очень) советов</h3>
           <li class="content__list__item">
-            <h3 class="title-decor content__list-heading">
+            <h4 class="title-decor content__list-heading">
               Представьте небо и облака
-            </h3>
+            </h4>
             <p class="content__list-paragraf">
               Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
               успокоиться. Ведь часто именно тревожные мысли о сложных задачах
@@ -147,7 +151,9 @@
             </p>
           </li>
           <li class="content__list__item">
-            <h3 class="title-decor content__list-heading">Включите музыку</h3>
+            <h4 class="title-decor content__list-heading">
+              Включите музыку
+            </h4>
             <p class="content__list-paragraf">
               Но не любую, и не любимую. Любимая может быть связана с сильными
               положительными эмоциями, которые тоже очень сильно отвлекают.
@@ -156,10 +162,10 @@
             </p>
           </li>
           <li class="content__list__item">
-            <h3 class="title-decor content__list-heading">Прогуляйтесь</h3>
+            <h4 class="title-decor content__list-heading">Прогуляйтесь</h4>
             <p class="content__list-paragraf">
               Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-              <a class="text-link">показал</a>, что созерцание природы повышает
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" class="text-link">показал</a>, что созерцание природы повышает
               концентрацию, в то время как после просмотра городских пейзажей
               она наоборот понижается. Можно совместить прогулку с физическими
               упражнениями или бегом — так в мозг поступит ещё больше кислорода
@@ -168,7 +174,7 @@
             </p>
           </li>
           <li class="content__list__item">
-            <h3 class="title-decor content__list-heading">Хорошо ешьте</h3>
+            <h4 class="title-decor content__list-heading">Хорошо ешьте</h4>
             <p class="content__list-paragraf">
               Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
               которые препятствуют резким скачкам сахара в крови. Например, с
@@ -177,7 +183,7 @@
             </p>
           </li>
           <li class="content__list__item">
-            <h3 class="title-decor content__list-heading">Читайте</h3>
+            <h4 class="title-decor content__list-heading">Читайте</h4>
             <p class="content__list-paragraf">
               Настоящие бумажные книги. Это правда помогает с концентрацией:
               чтобы прочитать пост в соцсети, достаточно нескольких минут или
@@ -188,7 +194,7 @@
         </ul>
       </section>
       <section class="section__gallery">
-        <h3 class="title-decor">А можно в картинках?</h3>
+        <h2 class="title-decor">А можно в картинках?</h2>
         <div class="gallery">
           <img
             src="./images/sunset.png"
@@ -224,7 +230,9 @@
       </section>
     </main>
     <footer class="footer">
-      <h2 class="footer__title">focus</h2>
+      <div class="footer__decorated-zone decorated-zone">
+        <h2 class="footer__title">focus</h2>
+      </div>
     </footer>
   </body>
 </html>
