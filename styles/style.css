@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   background-color: var(--bg-color);
   margin: auto;
   background-image: var(--bg-image-path);
@@ -12,13 +12,13 @@
   background-position: center;
   background-size: cover;
   width: min(calc(100vw - 40px), 1024px);
+  padding: 0 10px;
 }
 
 .decorated-zone {
 height: calc(100vh - 20px);
 width: calc(100vw - 20px);
 position: absolute;
-padding: 10px;
 }
 
 .decorated-zone::before {
@@ -77,7 +77,7 @@ padding: 10px;
 }
 
 .title {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 0.04em 0.04em var(--accent-color);
@@ -90,15 +90,16 @@ padding: 10px;
 .title-decor {
   background-color: var(--accent-color);
   color: #000;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   font-size: 18px;
   font-style: bold;
   height: min-content;
+  line-height: 23.4px;
 }
 
 .header__title-decor {
-  margin-block-end: 67px;
+  margin-block-end: 60px;
 }
 
 .header__theme-menu-list {
@@ -123,7 +124,7 @@ padding: 10px;
   line-height: 18px;
   width: 70px;
   height: 26px;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   font-weight: 400;
 }
@@ -138,7 +139,7 @@ padding: 10px;
 }
 
 .content {
-  padding: 10px;
+  padding: 10px 0;
 }
 .section {
   margin-block-start: 10px;
@@ -146,16 +147,21 @@ padding: 10px;
 
 .section__title {
   color: var(--section-title-color);
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   font-size: 18px;
   font-style: bold;
   line-height: 23.4px;
   margin-block-end: 20px;
 }
-
-.section__how p.title-decor {
-  margin-block-end: 20px;
+.section__what {
+  margin-block-start: 50px;
+}
+.section__how {
+  margin-block-start: 50px;
+}
+.section__how h3.title-decor {
+  margin-block-end: 18px;
 }
 
 .content__list__item {
@@ -167,7 +173,7 @@ padding: 10px;
 }
 
 .content__list-paragraf {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   line-height: 23.4px;
   font-weight: 400;
@@ -190,13 +196,16 @@ h4.title-decor {
 }
 
 .section__gallery {
-  margin-block-start: 10px;
+  margin-block-start: 48px;
 }
 
 .gallery {
   width: 100;
   height: min-content;
-  margin-block-start: 12px;
+  margin-block-start: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .gallery__image {
@@ -207,13 +216,9 @@ h4.title-decor {
   object-fit: cover;
 }
 
-.gallery__image {
-  margin-block-end: 7px;
-}
-
 .footer {
   height: max(668px, 100vh);
-  margin-block-start: 20px;
+  margin-block-start: 32px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -224,24 +229,28 @@ h4.title-decor {
   align-items: center;
 }
 .footer__title {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 0.04em 0.04em var(--accent-color);
+  text-shadow: 0.02em 0.02em var(--accent-color);
   font-weight: 700;
   line-height: 83%;
 }
 
 @media (width >= 750px) {
+  .page {
+    padding: 0;
+  }
   
   .title {
-    translate: -20px 5px;
+    translate: -20px 0;
+    margin-block-start: 174px;
   }
 
   .header__title-decor {
     width: 50%;
     display: flex;
-    margin-block-start: 11px;
+    margin-block-start: 105px;
     margin-inline-start: calc(100% / );
   }
   .header__decor {
@@ -255,13 +264,14 @@ h4.title-decor {
   .header {
     margin-block-end: 40px;
     block-size: max(668px, 100vh);
-    padding: 20px
+    padding: 20px 0;
   }
   .decorated-zone {
     height: calc(100vh - 40px);
-    width: min(calc(100vw - 60px), 1004px);
+    width: min(calc(100vw - 40px), 1004px);
     position: absolute;
 }
+
   .section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -277,7 +287,7 @@ h4.title-decor {
   }
 
   .section__what {
-    margin-block-start: 20px;
+    margin-block-start: 60px;
   }
 
   .section__what .section__title {
@@ -289,7 +299,7 @@ h4.title-decor {
   }
 
   .section__how {
-    margin-block-start: 20px;
+    margin-block-start: 58px;
   }
 
   .section__how .section__title {
@@ -297,6 +307,7 @@ h4.title-decor {
   }
 
   .section__how .title-decor {
+    margin-block-start: 3px;
     grid-column: span 2;
   }
 
@@ -305,7 +316,8 @@ h4.title-decor {
   }
 
   .section__gallery {
-    margin-block-start: 23px;
+    margin-block-start: 60px;
+    margin-block-end: 17px;
   }
 
   .section__gallery .title-decor {
@@ -316,8 +328,8 @@ h4.title-decor {
   .gallery {
     display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
   }
 
   .gallery__image-sunset {
@@ -359,9 +371,11 @@ h4.title-decor {
 
 @media (width >= 1000px) {
   .title {
-    margin-block-start: 220px;
+    margin-block-start: 272px;
   }
-
+   .header__title-decor{
+    margin-block-start: 60px;
+   }
   .section {
     column-gap: 20px;
   }
