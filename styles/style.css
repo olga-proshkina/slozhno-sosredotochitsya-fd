@@ -172,7 +172,7 @@ padding: 10px;
   text-shadow: 0.04em 0.04em var(--accent-color);
 }
 
-.title-decor.content__list-heading {
+h4.title-decor {
   font-weight: 400;
 }
 
