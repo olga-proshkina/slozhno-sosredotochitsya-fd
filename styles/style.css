@@ -49,6 +49,8 @@ padding: 10px;
   margin-block-end: 20px;
   height: max(668px, 100vh);
   padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .page-decoration-text {
@@ -202,6 +204,8 @@ padding: 10px;
   height: max(668px, 100vh);
   margin-block-start: 20px;
   padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 .footer__decorated-zone {
   display: flex;
