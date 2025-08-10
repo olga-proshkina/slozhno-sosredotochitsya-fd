@@ -137,6 +137,9 @@ padding: 10px;
   pointer-events: none;
 }
 
+.content {
+  padding: 10px;
+}
 .section {
   margin-block-start: 10px;
 }
@@ -256,7 +259,7 @@ h4.title-decor {
   }
   .decorated-zone {
     height: calc(100vh - 40px);
-    width: min(calc(100vw - 40px), 1024px);
+    width: min(calc(100vw - 60px), 1004px);
     position: absolute;
 }
   .section {
