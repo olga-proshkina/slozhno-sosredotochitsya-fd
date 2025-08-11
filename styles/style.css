@@ -93,7 +93,6 @@
   font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   font-size: 18px;
-  font-style: bold;
   height: min-content;
   line-height: 23.4px;
 }
@@ -153,7 +152,6 @@
   font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   font-size: 18px;
-  font-style: bold;
   line-height: 23.4px;
   margin-block-end: 20px;
 }
@@ -204,7 +202,6 @@ h4.title-decor {
 }
 
 .gallery {
-  width: 100;
   height: min-content;
   margin-block-start: 10px;
   display: flex;

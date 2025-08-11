@@ -31,9 +31,9 @@
   --decoration-color: #ff0070;
   --section-title-color: #ff0070;
   --menu-color-hover: #ff007066;
-
-  .page-decoration-text,
-  .page-decoration-text::after {
+}
+  :root.theme-dark .page-decoration-text,
+  :root.theme-dark .page-decoration-text::after {
     display: initial;
   }
-}
+
