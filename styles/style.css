@@ -131,6 +131,10 @@
 .header__theme-menu-button:hover {
   border: solid 1px var(--menu-color-hover);
 }
+.header__theme-menu-button:focus {
+  border-bottom: solid 1px var(--menu-color);
+  outline: none;
+}
 
 .header__theme-menu-button_active {
   border: solid 1px var(--menu-color);
@@ -182,9 +186,10 @@
 
 .text-link {
   text-shadow: 0.04em 0.04em var(--accent-color);
+  text-decoration: none;
 }
 .text-link:hover {
-  text-decoration: underline;
+  border-bottom: solid 1px var(--text-color);
 }
 .text-link:focus {
   outline: solid 1px var(--text-color);
