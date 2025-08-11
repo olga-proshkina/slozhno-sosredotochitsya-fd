@@ -3,6 +3,23 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image-path: url(../images/cover-image-light.png);
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
+    --bg-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --menu-color: #353430;
+    --decoration-color: #353430;
+    --section-title-color: #353430;
+    --menu-color-hover: #32312d66;
+    .page-decoration-text,
+    .page-decoration-text::after {
+      display: none;
+    }
+  }
+}
 
 :root.theme-light {
   --bg-image-path: url(../images/cover-image-light.png);

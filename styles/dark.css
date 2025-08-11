@@ -3,6 +3,23 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image-path: url(../images/cover-image-dark.png);
+    --accent-color: #ff0070;
+    --text-color: #f1b2ce;
+    --bg-color: #000028;
+    --title-color: #db00ff;
+    --menu-color: #ff0070;
+    --decoration-color: #ff0070;
+    --section-title-color: #ff0070;
+    --menu-color-hover: #ff007066;
+  }
+  .page-decoration-text,
+  .page-decoration-text::after {
+    display: initial;
+  }
+}
 
 :root.theme-dark {
   --bg-image-path: url(../images/cover-image-dark.png);

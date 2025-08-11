@@ -396,38 +396,5 @@ h4.title-decor {
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-image-path: url(../images/cover-image-light.png);
-    --accent-color: #ff8dcb;
-    --text-color: #353430;
-    --bg-color: #fff1f7;
-    --title-color: #ffc2e6;
-    --menu-color: #353430;
-    --decoration-color: #353430;
-    --section-title-color: #353430;
-    --menu-color-hover: #32312d66;
-    .page-decoration-text,
-    .page-decoration-text::after {
-      display: none;
-    }
-  }
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-image-path: url(../images/cover-image-dark.png);
-    --accent-color: #ff0070;
-    --text-color: #f1b2ce;
-    --bg-color: #000028;
-    --title-color: #db00ff;
-    --menu-color: #ff0070;
-    --decoration-color: #ff0070;
-    --section-title-color: #ff0070;
-    --menu-color-hover: #ff007066;
-  }
-  .page-decoration-text,
-  .page-decoration-text::after {
-    display: initial;
-  }
-}
+
